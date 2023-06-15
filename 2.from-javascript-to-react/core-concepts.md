@@ -97,6 +97,76 @@ function HomePage() {
 }
 ```
 
+### interactivity & state 交互,状态
+
+state & event handlers
+
+```jsx
+// 创建一个按钮,侦听事件
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <button onClick={}>Like</button>
+    </div>
+  );
+}
+```
+
+onClick 事件是可用于响应用户交互的众多可能事件之一
+onChange 用于输入字段，
+onSubmit 用于表单
+
+```jsx
+function HomePage() {
+  //    ...
+  function handleClick() {
+    console.log('increment like count');
+  }
+
+  return (
+    <div>
+      {/* ... */}
+      <button onClick={handleClick}>Like</button>
+    </div>
+  );
+}
+```
+
+with state,状态更新
+
+```jsx
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+  const [likes,setLikes]=React.useState(0);
+  function handleClick(){
+    setLikes(likes+1);
+  }
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <button onClick={handlerClick}>Like({likes})</button>
+    </div>
+  );
+}
+```
+
 ## ref
 
 - <https://nextjs.org/learn/foundations/from-javascript-to-react/building-ui-with-components>
+- <https://nextjs.org/learn/foundations/from-javascript-to-react/continue-learning-react>
