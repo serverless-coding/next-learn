@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        function Header() {
+            return <h1>Develop. Preview. Ship. 🚀</h1>;
+        }
+
+        function HomePage() {
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+            return (
+              <div>
+                <Header title="Develop. Preview. Ship. 🚀" />
+                <ul>
+                  {
+                      names.map((name) => (
+                      <li>{name}</li>
+                      ))
+                  }
+                </ul>
+              </div>
+            );
+        }
+      const app = document.getElementById('app');
+      ReactDOM.render(<HomePage />, app);
+    </script>
+  </body>
+</html>
