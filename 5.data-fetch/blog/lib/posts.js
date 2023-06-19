@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -63,13 +65,24 @@ export function getAllPostIds() {
 }
 
 
-export function getPostData(id) {
+// 异步获取信息
+// 渲染markdown
+export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf-8');
 
     const matterResult = matter(fileContents);
+
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+        .use(html)
+        .process(matterResult.content);
+    const contentHtml = processedContent.toString();
+
+    // Combine the data with the id and contentHtml
     return {
         id,
+        contentHtml,
         ...matterResult.data,
     };
 }
