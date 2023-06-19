@@ -1,6 +1,6 @@
 import { parseISO, format } from "date-fns";
 
-export default function Date(dateString) {
+export default function Date({ dateString }: { dateString: string }) {
     dateString = '2023-06-16';
     console.log('时间:');
     console.log('时间:' + dateString);

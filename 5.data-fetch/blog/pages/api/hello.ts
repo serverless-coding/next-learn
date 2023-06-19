@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next'
 
 type Data = {
   name: string
@@ -20,3 +20,5 @@ export async function getServerSideProps(params: string) {
     }
   };
 }
+
+

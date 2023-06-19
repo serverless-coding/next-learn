@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/api/swr-example.js",
-    "lib/posts.js",
+    "lib/posts.ts",
     "components/date.js",
     "components/date.js"
   ],
