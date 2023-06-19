@@ -29,7 +29,9 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/api/swr-example.js",
-    "lib/posts.js"
+    "lib/posts.js",
+    "components/date.js",
+    "components/date.js"
   ],
   "exclude": [
     "node_modules"
