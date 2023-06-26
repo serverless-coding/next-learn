@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
+export type Data = {
     log: string
     id: string
     age: string

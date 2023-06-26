@@ -48,5 +48,9 @@
 }
 
 .lightText {
-    color: #666;
+    color: #789;
+}
+
+.padding100px {
+    padding-left: 20px;
 }

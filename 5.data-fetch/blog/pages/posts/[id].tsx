@@ -4,6 +4,8 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { tr } from 'date-fns/locale';
+import Image from 'next/image';
 
 type PostData = {
     postData: {
@@ -15,7 +17,7 @@ type PostData = {
 
 export default function Post({ postData }: PostData) {
     return (
-        <Layout>
+        <Layout home={false}>
             <Head>
                 <title>{postData.title}</title>
             </Head>
@@ -27,6 +29,11 @@ export default function Post({ postData }: PostData) {
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </article>
+            <br></br>
+            <label>Power By</label>
+            <footer>
+                <Image className={utilStyles.padding100px} src='/next.svg' alt='Powver by' width={144} height={144} />
+            </footer>
         </Layout>
     );
 }
