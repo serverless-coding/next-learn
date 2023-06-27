@@ -37,3 +37,5 @@ next-env.d.ts
 .vercel
 .next
 node_modules
+
+.vscode
