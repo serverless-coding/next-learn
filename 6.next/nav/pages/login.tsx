@@ -11,7 +11,7 @@ export default function Login() {
     }
 
     return (
-        <Layout>
+        <Layout >
             <input placeholder="User Name" />
             <input placeholder="Password" type="password" />
             <button onClick={onLogin} type='button'>
