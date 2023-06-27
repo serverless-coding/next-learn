@@ -14,10 +14,10 @@ export default function Header() {
                     <Link href="/contact"> Contact </Link>
                 </li>
                 <li>
-                    <Link as="/post/first" href="/post/[id]"> First Post </Link>
+                    <Link as="/post/1" href="/post/[id]"> First Post </Link>
                 </li>
                 <li>
-                    <Link as="/post/second" href="/post/[id]"> Second Post </Link>
+                    <Link as="/post/2" href="/post/[id]"> Second Post </Link>
                 </li>
             </ul>
         </>
