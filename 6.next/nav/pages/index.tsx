@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Header from '../components/header'
 import React from 'react';
+import Layout from '@/components/layout';
 
 const List = ({ items, ...props }: { items: string[] }) => {
   const [filteredItems, setFilteredItems] = React.useState(items);
@@ -28,13 +29,14 @@ export default function Home() {
 
   return (
     <main>
-      <Header />
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1>Welcome to Mastering Next.js!</h1>
-      </div>
-      <br />
-      <label>My Fancy List</label>
-      <List aria-label="My Fancy List" items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
+      <Layout>
+        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+          <h1>Welcome to Mastering Next.js!</h1>
+        </div>
+        <br />
+        <label>My Fancy List</label>
+        <List aria-label="My Fancy List" items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
+      </Layout>
     </main>
   )
 }

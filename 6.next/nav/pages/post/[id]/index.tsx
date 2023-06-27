@@ -1,3 +1,4 @@
+import Layout from '@/components/layout';
 import Header from '../../../components/header'
 import { useRouter } from "next/router";
 
@@ -30,13 +31,12 @@ export default function Post({ post }: { post: postData }) {
     const { id } = router.query;
     console.log("query val:", { id })
     return (
-        <>
-            <Header />
+        <Layout>
             <br />
             <h1><strong>{post.title}</strong></h1>
             <br />
             <p>{post.body}</p>
-        </>
+        </Layout>
     )
 }
 

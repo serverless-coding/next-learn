@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Header from '../components/header'
+import Layout from "@/components/layout";
 
 
 export default function Login() {
@@ -10,13 +11,12 @@ export default function Login() {
     }
 
     return (
-        <>
-            <Header />
+        <Layout>
             <input placeholder="User Name" />
             <input placeholder="Password" type="password" />
             <button onClick={onLogin} type='button'>
                 Log In
             </button>
-        </>
+        </Layout>
     );
 }

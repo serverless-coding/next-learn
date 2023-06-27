@@ -1,3 +1,4 @@
+import Layout from '@/components/layout'
 import Header from '../components/header'
 type UserInfo = {
     name: string
@@ -22,12 +23,11 @@ export async function getServerSideProps() {
 
 export default function Dashboard({ data }: { data: UserInfo }) {
     return (
-        <>
-            <Header />
+        <Layout>
             <br />
             <h1><strong>{data.name}{data.title}</strong></h1>
             <p>{`Bio: ${data.bio}`}</p>
             <p>{`Blog: ${data.blog}`}</p>
-        </>
+        </Layout>
     )
 }
