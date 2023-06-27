@@ -14,6 +14,9 @@ export default function Header() {
                     <Link href="/contact"> Contact </Link>
                 </li>
                 <li>
+                    <Link href="/login"> Login </Link>
+                </li>
+                <li>
                     <Link as="/post/1" href="/post/[id]"> First Post </Link>
                 </li>
                 <li>

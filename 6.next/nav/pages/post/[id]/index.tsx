@@ -13,7 +13,7 @@ export async function getServerSideProps(context: any) {
     const { id } = context.query
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     if (!res.ok) {
-        throw new Error("fetch post failed")
+        throw new Error("fetch post failed" + res.text())
     }
 
     const data = await res.json();
