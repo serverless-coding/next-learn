@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Header from '../components/header'
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Layout from '@/components/layout';
+import NestedLayout from '@/components/nested-layout';
 
 const List = ({ items, ...props }: { items: string[] }) => {
   const [filteredItems, setFilteredItems] = React.useState(items);
@@ -25,18 +26,27 @@ const List = ({ items, ...props }: { items: string[] }) => {
   );
 };
 
-export default function Home() {
+// add multity layout
+//  https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#per-page-layouts
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      <NestedLayout>{page}</NestedLayout>
+    </Layout>
+  )
+}
 
+export default function Home() {
   return (
     <main>
-      <Layout>
-        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-          <h1>Welcome to Mastering Next.js!</h1>
-        </div>
-        <br />
-        <label>My Fancy List</label>
-        <List aria-label="My Fancy List" items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
-      </Layout>
+      <div>
+        <h1>Welcome to Mastering Next.js!</h1>
+      </div>
+      <br />
+      <label>My Fancy List</label>
+      <List aria-label="My Fancy List" items={['Learn React', 'Learn Next.js', '???', 'Profit']} />
     </main>
   )
 }
+
+

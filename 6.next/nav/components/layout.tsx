@@ -5,11 +5,7 @@ const Layout = ({ children }: { children: any }) => {
     return (
         <div className="ml-3">
             <nav>
-                <ul>
-                    <li>
-                        <Header />
-                    </li>
-                </ul>
+                <Header />
             </nav>
             <br />
 
