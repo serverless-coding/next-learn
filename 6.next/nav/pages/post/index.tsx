@@ -5,10 +5,10 @@ function Posts() {
     const ps = ["1", "2", "3"]
     return (
         <Layout>
-            <ul>
+            <ul className='ml-10 stroke-slate-400'>
                 {
                     ps.map((post) => (
-                        <li key={post}>
+                        <li key={post} className='font-semibold'>
                             <Link href={`/post/${post}`} >post: {post} </Link>
                         </li>
                     ))
