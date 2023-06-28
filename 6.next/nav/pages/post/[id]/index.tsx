@@ -1,5 +1,4 @@
 import Layout from '@/components/layout';
-import Header from '../../../components/header'
 import { useRouter } from "next/router";
 
 type postData = {

@@ -19,6 +19,9 @@ export default function Header() {
                 <li className="mr-4">
                     <Link href="/post"> Posts </Link>
                 </li>
+                <li className="mr-4">
+                    <Link href="/events"> Events </Link>
+                </li>
             </ul>
         </>
     );
