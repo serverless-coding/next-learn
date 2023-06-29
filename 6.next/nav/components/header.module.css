@@ -1,0 +1,8 @@
+.item{
+    margin-right: 1rem;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    flex-direction: row;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

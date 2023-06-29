@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: any }) => {
             <main>{children}</main>
 
             <br />
-            <footer>&copy; 2022 My Website</footer>
+            <footer>&copy; 2023 serverless</footer>
         </div>
     );
 };

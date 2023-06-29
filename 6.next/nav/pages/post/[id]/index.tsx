@@ -1,23 +1,21 @@
 import Layout from '@/components/layout';
+import Link from 'next/link';
 import { useRouter } from "next/router";
 
 type postData = {
-    id: number
-    title: string,
-    body: string,
-    userId: number
+    origin: string
 }
 
-
 export async function getServerSideProps(context: any) {
-    const { id } = context.query
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    const id: string = context.query.id
+    console.log("fetch:", id, context.query)
+
+    const res = await fetch(`https://echo.apifox.com/ip`);
     if (!res.ok) {
         throw new Error("fetch post failed" + res.text())
     }
 
     const data = await res.json();
-    console.log("fetch res:", data)
     return {
         props: {
             post: data
@@ -31,10 +29,11 @@ export default function Post({ post }: { post: postData }) {
     console.log("query val:", { id })
     return (
         <Layout>
+            <h1><strong>query post {id} from IP:</strong></h1>
             <br />
-            <h1><strong>{post.title}</strong></h1>
+            <p>{post.origin}</p>
             <br />
-            <p>{post.body}</p>
+            <Link href='https://echo.apifox.com'><p>Power By apifox</p></Link>
         </Layout>
     )
 }
