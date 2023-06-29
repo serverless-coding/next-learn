@@ -1,12 +1,11 @@
+import { ReactNode } from 'react';
 import classes from './logistics-item.module.css';
 
-// todo
-function LogisticsItem(props: any) {
-    const { icon: Icon } = props;
+function LogisticsItem(props: { children: JSX.Element, icon?: JSX.Element }) {
     return (
         <li className={classes.item}>
             <span className={classes.icon}>
-                <Icon />
+                {props.icon}
             </span>
             <span className={classes.content}>{props.children}</span>
         </li>

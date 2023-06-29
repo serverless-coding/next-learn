@@ -1,7 +1,6 @@
 import classes from './event-content.module.css';
 
-// TODO
-function EventContent(props: any) {
+function EventContent(props: { children: JSX.Element }) {
   return (
     <section className={classes.content}>
       {props.children}

@@ -2,14 +2,13 @@ import Link from "next/link";
 import classes from "./button.module.css";
 import { ReactElement, ReactNode } from "react";
 
-function Button(props: any & { link: string, title: string }) {
+function Button(props: {
+  children: JSX.Element, link?: string, title: string, onClick: () => void
+}) {
   if (props.link) {
     return (
-      // TODO 
-      // <Link href={props.link}>
-      //   <a className={classes.btn}>{props.children}</a>
-      // </Link>
-      <Link href={props.link} className={classes.btn} >{props.children} {props.title}</Link>
+      <Link href={props.link}  ><span className={classes.btn}>{props.children}</span></Link>
+      //equal  <Link href={props.link} className={classes.btn} >{props.children}</Link>
     );
   }
 

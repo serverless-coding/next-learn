@@ -5,8 +5,7 @@ import LogisticsItem from './logistics-item'
 import DateIcon from '../icons/date-icon'
 import AddressIcon from '../icons/address-icon'
 
-// TODO:
-export default function EventLogistics(props: any & { event: Event }) {
+export default function EventLogistics(props: { event: Event }) {
     let event = props.event
     const date = new Date(event.date).toLocaleDateString('zh-CN', {
         day: 'numeric',
@@ -20,10 +19,10 @@ export default function EventLogistics(props: any & { event: Event }) {
                 <Image src={`/${event.image}`} alt={event.title} width={200} height={150} />
             </div>
             <ul className={classes.list}>
-                <LogisticsItem icon={DateIcon}>
+                <LogisticsItem icon={<DateIcon />}>
                     <time>{date} {event.date}</time>
                 </LogisticsItem>
-                <LogisticsItem icon={AddressIcon} >
+                <LogisticsItem icon={<AddressIcon />} >
                     <address>{address}</address>
                 </LogisticsItem>
             </ul>
