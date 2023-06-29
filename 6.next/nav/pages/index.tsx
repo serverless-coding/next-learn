@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Header from '../components/header'
 import React, { ReactElement } from 'react';
 import Layout from '@/components/layout';
 import NestedLayout from '@/components/nested-layout';

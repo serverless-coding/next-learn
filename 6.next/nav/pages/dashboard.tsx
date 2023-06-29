@@ -1,5 +1,5 @@
 import Layout from '@/components/layout'
-import Header from '../components/header'
+
 type UserInfo = {
     name: string
     bio: string

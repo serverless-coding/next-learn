@@ -3,11 +3,18 @@ import classes from "./button.module.css";
 import { ReactElement, ReactNode } from "react";
 
 function Button(props: {
-  children: JSX.Element, link?: string, title: string, onClick: () => void
+  children?: JSX.Element | JSX.Element[] | string,
+  link?: string,
+  title?: string,
+  onClick?: () => void
 }) {
   if (props.link) {
     return (
-      <Link href={props.link}  ><span className={classes.btn}>{props.children}</span></Link>
+      <Link href={props.link}>
+        <span className={classes.btn}>
+          {props.children}
+        </span>
+      </Link>
       //equal  <Link href={props.link} className={classes.btn} >{props.children}</Link>
     );
   }
