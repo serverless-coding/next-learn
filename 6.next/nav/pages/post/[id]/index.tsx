@@ -1,13 +1,15 @@
 import Layout from '@/components/layout';
+import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 import { useRouter } from "next/router";
+import { Context } from 'react';
 
 type postData = {
     origin: string
 }
 
-export async function getServerSideProps(context: any) {
-    const id: string = context.query.id
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+    const id: string = context.query.id as string
     console.log("fetch:", id, context.query)
 
     const res = await fetch(`https://echo.apifox.com/ip`);
