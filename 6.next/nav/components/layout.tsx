@@ -9,11 +9,19 @@ const Layout = ({ children }: { children: any }) => {
             </nav>
             <br />
 
-            <main>{children}</main>
+            <main className='m-auto h-full'>
+                {children}
+            </main>
 
             <br />
             <footer>
-                <Link href="https://github.com/serverless-coding"> &copy; 2023 serverless</Link>
+                <div>
+                    <ul className="flex">
+                        <li className="mr-4"> <Link href="https://github.com/serverless-coding"> &copy; 2023 serverless</Link></li>
+                        <li className="mr-4"> <Link href="/about"> About </Link></li>
+                        <li className="mr-4"> <Link href="/contact"> Contact </Link></li>
+                    </ul>
+                </div>
             </footer>
         </div>
     );

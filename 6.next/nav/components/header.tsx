@@ -9,19 +9,13 @@ export default function Header() {
                     <Link href="/">Home</Link>
                 </li>
                 <li className={styles.item}>
-                    <Link href="/about"> About </Link>
-                </li>
-                <li className={styles.item}>
-                    <Link href="/contact"> Contact </Link>
-                </li>
-                <li className={styles.item}>
                     <Link href="/login"> Login </Link>
                 </li>
                 <li className={styles.item}>
-                    <Link href="/post"> Posts </Link>
+                    <Link href="/post"> DataFetching </Link>
                 </li>
                 <li className={styles.item}>
-                    <Link href="/events"> Events </Link>
+                    <Link href="/events"> Routing&Link </Link>
                 </li>
                 <li className={styles.item}>
                     <Link href="https://github.com/serverless-coding/next-learn"> Github </Link>
