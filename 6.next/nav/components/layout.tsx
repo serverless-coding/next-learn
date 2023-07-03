@@ -12,7 +12,9 @@ const Layout = ({ children }: { children: any }) => {
             <main>{children}</main>
 
             <br />
-            <footer>&copy; 2023 serverless</footer>
+            <footer>
+                <Link href="https://github.com/serverless-coding"> &copy; 2023 serverless</Link>
+            </footer>
         </div>
     );
 };
