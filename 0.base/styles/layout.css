@@ -1,0 +1,16 @@
+main {
+    color: aqua;
+    display: flex;
+}
+
+aside {
+    flex-direction: row;
+    margin-right: 40px;
+}
+
+footer {
+    margin-top: 20px auto;
+    margin-left: 20px;
+    flex-direction: column;
+    display: flex;
+}

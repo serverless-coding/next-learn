@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <time>2022-10-10</time>
+    <address>101,ShenZhen,GD,China</address>
+    <meta name="author" content="yiGmMk" />
+    <meta name="description" content="a demo site for  practice,using react,ts,js,css and so on" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Flomo</title>
+    <!-- 脚本 defer只是浏览器在完成html解析后再加载js -->
+    <script src="scripts/main.js" defer></script>
+    <!-- 样式 -->
+    <link href="styles/base.css" rel="stylesheet" />
+    <link href="styles/layout.css" rel="stylesheet" />
+    <!-- icon 好像不起作用 -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+
+
+<body>
+    <header>
+        <h1> Flomo </h1>
+    </header>
+
+    <main>
+        <aside>
+            <ul>
+                <li>@c++</li>
+                <li>@go</li>
+                <li>@shell</li>
+                <li><a href="full.html">@full html</a></li>
+            </ul>
+        </aside>
+        <div>
+            <div>
+                <div>
+                    <p>MEMO</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>technologists</li>
+                        <li>thinkers</li>
+                    </ul>
+                </div>
+            </div>
+            <p><a href="https://nav.programnotes.cn" title="my nav">nav</a> hello</p>
+            <input type="text">
+            <br />
+            <article>&lt; this is a demo project &gt;</article>
+
+            <svg version="1.1" baseProfile="full" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="red" />
+                <circle cx="25" cy="25" r="25" fill="green" />
+            </svg>
+
+
+            <!-- 嵌入网页 allowfullscreen是否允许设置为全屏模式 sandbox沙盒,提升安全性用 -->
+            <iframe src="https://nav.programnotes.cn" width="100%" height="500" frameborder="1" allowfullscreen sandbox>
+                <p>
+                    <a href="https://programnotes.cn">
+                        Fallback link for browsers that don't support iframes
+                    </a>
+                </p>
+            </iframe>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>
+            &copy; serverless-coding <a href="contact.html#mailAddress">邮件地址</a>
+            <a href="mailto:contact@xxxx.com">发送邮件</a>
+        </p>
+        <img src="img/favicon.ico" width="10" height="10" alt="logo" />
+    </footer>
+</body>
+
+</html>
