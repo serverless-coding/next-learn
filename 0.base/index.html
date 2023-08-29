@@ -73,7 +73,11 @@
             &copy; serverless-coding <a href="contact.html#mailAddress">邮件地址</a>
             <a href="mailto:contact@xxxx.com">发送邮件</a>
         </p>
-        <img src="img/favicon.ico" width="10" height="10" alt="logo" />
+        <!-- 响应式图片 srcset 定义了浏览器可选择的图片设置以及每个图片的大小
+            sizes 定义浏览器可选择的图片设置及每个图片的大小
+        -->
+        <img src="img/favicon.ico" width="10" height="10" alt="logo" srcset="img/favicon.ico 10w, img/favicon.ico 100w"
+            sizes="(max-width: 20px) 10px 100px" />
     </footer>
 </body>
 
