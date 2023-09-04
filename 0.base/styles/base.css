@@ -52,3 +52,15 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+/*
+   li.color-li: 选中每个color-li类的li元素,加完限制后,只能在li里使用
+或 color-li类,不限制类型,只要选定了类都可以选中
+*/
+li.color-li,
+.color-li,
+li em,
+li+p {
+    color: blueviolet;
+    font-size: medium;
+}
