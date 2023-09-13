@@ -1,7 +1,3 @@
-p {
-    color: red;
-}
-
 /* 优先级比 */
 .special {
     color: aquamarine;
@@ -54,10 +50,11 @@ h1 {
 
 /* 处理在 DOM 中嵌套的特殊元素 */
 /* -------------------------------------------------------------------------------------------- */
-div p,
+div+p,
 #id:first-line {
-    background-color: red;
+    color: hotpink;
     border-radius: 3px;
+    border-bottom: 8px dotted purple;
 }
 
 div p {
