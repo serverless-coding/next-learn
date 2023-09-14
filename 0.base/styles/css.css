@@ -65,3 +65,7 @@ div p {
 div p+p {
     padding-top: 0;
 }
+
+a[title] {
+    color: cadetblue;
+}
